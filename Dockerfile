@@ -6,4 +6,4 @@ RUN unzip WebSample-SNAPSHOT.zip
 
 CMD cd WebSample && java -cp 'lib/*:.' ch.websample.WebSample
 
-EXPOSE 8080
+EXPOSE 8083
