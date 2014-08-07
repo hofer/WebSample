@@ -129,7 +129,7 @@ task :start do
   sh "cd deploy/WebSample && nohup java -cp 'lib/*:.' ch.websample.WebSample &"
 end
 
-task :test do
+task :test_smoke do
   sh "curl http://localhost:8083/hello"
 end
 
