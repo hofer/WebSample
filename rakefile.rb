@@ -29,7 +29,7 @@ end
 
 desc "Setup project"
 task :setup do
-  # sh "mdkir -p src/main/sass src/main/coffee"
+  sh "mdkir -p src/main/sass src/main/coffee"
   sh "rm -rf .tools"
   sh "wget http://s3.amazonaws.com/share.marc.hofer.ch/BuildTools.tgz"
   sh "tar -xvzf BuildTools.tgz"
