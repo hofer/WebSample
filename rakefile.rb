@@ -118,9 +118,23 @@ task :test => [:test_unit]
 # Run
 # ****************************************************************************************************
 
-task :run do
+task :run => [:package_webapp] do
   sh "cd deploy && unzip WebSample-SNAPSHOT.zip"
   sh "cd deploy/WebSample && java -cp 'lib/*:.' ch.websample.WebSample"
+end
+
+task :start do
+  sh "rm -rf deploy/WebSample"
+  sh "cd deploy && unzip WebSample-SNAPSHOT.zip"
+  sh "cd deploy/WebSample && nohup java -cp 'lib/*:.' ch.websample.WebSample &"
+end
+
+task :test do
+  sh "curl http://localhost:8083/hello"
+end
+
+task :stop do
+  sh "kill $(pgrep -f websample)"
 end
 
 # ****************************************************************************************************
