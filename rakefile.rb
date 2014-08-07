@@ -169,9 +169,9 @@ end
 task :process_js do
   tmp_dir = "#{bin_dir}/tmp_js"
   SRC = FileList["src/main/coffee/**/*.coffee"]
-  process_script( tmp_dir,
-                  "coffee -c -o #{tmp_dir} -j #{tmp_dir}/#{project_name}_coffee.js #{SRC.join(" ")}", 
-                  "js")
+#  process_script( tmp_dir,
+#                  "coffee -c -o #{tmp_dir} -j #{tmp_dir}/#{project_name}_coffee.js #{SRC.join(" ")}", 
+#                  "js")
 end
 
 task :process_css do
