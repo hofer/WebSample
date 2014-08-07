@@ -118,7 +118,7 @@ task :test => [:test_unit]
 # Run
 # ****************************************************************************************************
 
-task :run => [:package_webapp] do
+task :run do
   sh "cd deploy && unzip WebSample-SNAPSHOT.zip"
   sh "cd deploy/WebSample && java -cp 'lib/*:.' ch.websample.WebSample"
 end
