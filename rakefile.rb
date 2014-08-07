@@ -236,8 +236,8 @@ def create_distribution_files(file_name, file_extension)
 end
 
 def create_checkfiles(file_to_check, file_extension)
-  sh "cd deploy && md5 -q #{file_to_check}.#{file_extension} > #{file_to_check}.md5"
-  sh "cd deploy && openssl sha1 #{file_to_check}.#{file_extension} > #{file_to_check}.sha1"
+  # sh "cd deploy && md5 -q #{file_to_check}.#{file_extension} > #{file_to_check}.md5"
+  # sh "cd deploy && openssl sha1 #{file_to_check}.#{file_extension} > #{file_to_check}.sha1"
   
   # Sign:
   #sh "cd deploy && gpg -a --output #{file_to_check}.sig --detach-sig #{file_to_check}.#{file_extension}"
