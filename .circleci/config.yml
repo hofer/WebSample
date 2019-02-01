@@ -11,7 +11,8 @@ jobs:
       - image: circleci/golang
     steps:
       - checkout
-      - run: ls -alh
+      - setup_remote_docker
+      - run: docker images
 workflows:
   version: 2
   build_and_test:
