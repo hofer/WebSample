@@ -7,3 +7,6 @@ steps:
     ls -alh
   displayName: 'What is here'
 
+- script: |
+    ls -alh
+  displayName: 'What is here 2'
